@@ -109,5 +109,9 @@ Dominio de Texto: alphacity_cya
 	padding-left: 20px;
 }
 
-
 /* END_CONTENIDO */
+
+.sidebarBlog .row {
+	margin-left: 0px;
+	border: 1px solid red;
+}

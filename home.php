@@ -4,28 +4,31 @@
     <div class="row">
       <div class="col-md-7">
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+          <?php
+            $tags = "";
+            $cont = 0;
+            $posttags = sortWpResults( get_the_tags(), 'count', 'asc' );
+            if ($posttags) {
+              foreach($posttags as $tag) {
+                if ($cont==0) {$firstTag =$tag->name; }
+                $tags.= '#'.$tag->name . ' ';
+                $cont++;
+              }
+            }
+          ?>
           <article>
             <div class="row">
-              <div class="titlePost col-md-10"><h2><?php the_title(); ?></h2></div>
+              <div class="titlePost col-md-10"><h2><?php echo "#".$firstTag." | "; the_title(); ?></h2></div>
               <div class="col-md-2"><3 <!--Espacio para votar el post--></div>
               </div>
               <div class="row contentImage">
                 <img class="imgArticle img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="<?php echo the_title(); ?>">
               </div>
               <div class="row tags">
-                <h4>
-                  <?php
-                  $posttags = sortWpResults( get_the_tags(), 'count', 'asc' );
-                  if ($posttags) {
-                    foreach($posttags as $tag) {
-                      echo '#'.$tag->name . ' ';
-                    }
-                  }
-                  ?>
-                </h4>
+                <h4><?php echo $tags; ?></h4>
               </div>
               <div class="row textArticle">
-                <?php the_content();?>
+                <?php the_excerpt();?>
               </div>
               <div class="row infoAuthor">
                 <div class="col-xs-1 avatar">
@@ -45,7 +48,7 @@
             </article>
             <?php endwhile; endif; ?>
         </div>
-      <div class="col-md-5">Sidebar</div>
+        <?php get_sidebar('blog'); ?>      
     </div>
   </div>
 </section>

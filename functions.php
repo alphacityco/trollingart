@@ -27,6 +27,20 @@
     add_action('wp_enqueue_scripts','temas_js');
     add_theme_support( 'post-thumbnails' );
 
+    function crear_widget( $nombre, $id, $descripcion ) {
+      register_sidebar(array(
+        'name' => __( $nombre ),
+        'id' => $id,
+        'description' => __( $descripcion ),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+      ));
+    }
+
+    crear_widget('Sidebar del blog', 'blog','Se mostrará en Sidebar del blog');
+
     /**
     * Sorts a WordPress result array by custom criterias
     *
@@ -48,7 +62,7 @@
       return $results;
 
     }
-    
+
 
     /*===================================================================================
     * Add Author Links
