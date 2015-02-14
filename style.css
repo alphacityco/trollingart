@@ -1,0 +1,113 @@
+/*
+Nombre del Tema: Alphacity - Cya-sa.com en Bootstrap
+Tema URL: http://alphacity.co;
+Autor: Pino
+Autor URL: http://alphacity.co/
+Descripcion: Actualización de tema para la compañía Cya-sa
+Licencia: GNU General Public License v2 or superiores
+Licencia URL: http://www.gnu.org/licenses/gpl-2.0.html
+Dominio de Texto: alphacity_cya
+*/
+
+/*  HEADER */
+.menuSocials {
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	height: 70px;
+	z-index: 9999;
+	background-color: #fff;
+}
+.logo h3, .menuGen, .tagsMenu h4, .socialLink {
+	line-height: 70px;
+}
+
+.logo h3 {
+	font-weight: 900;
+}
+
+.logo h3, .tagsMenu h4 {
+	margin-top: 0px;
+
+}
+
+.containerSocial {
+	border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+
+/* This gets Google to fall into place */
+.social {
+	/* border: 1px solid red; */
+	font-size: 1px;
+	width: 80%;
+	float: right;
+}
+
+/* This gets Facebook to fall into place */
+.social iframe {
+	vertical-align: middle;
+}
+
+/* Set an optional width for your button wrappers */
+.social span {
+	display: inline-block;
+	width: 110px;
+}
+
+/* Adjust the widths individually if you like */
+.social .google {
+	width: 75px;
+}
+
+.social .twitter {
+	width: 220px;
+}
+
+/* END_HEADER */
+
+/* Contenido */
+.content {
+	padding-top: 50px;
+}
+.content .container {
+	padding: 0px 85px 0 85px;
+}
+.content .titlePost {
+	padding: 0px 0 10px 0;
+}
+.content .titlePost h2 {
+	margin-top: 10px;
+}
+.content .contentImage {
+	padding: 25px;
+	background-color: #eee;
+}
+
+.imgArticle {
+	margin:0 auto;
+}
+.content .tags {
+	padding: 5px 0 5px 0;
+}
+.textArticle {
+	padding-bottom: 15px;
+}
+.infoAuthor {
+	height: 70px;
+}
+
+.author, .readMore {
+	line-height: 70px;
+}
+.readMore .glyphicon {
+	padding-right: 5px;
+}
+.avatar {
+	padding: 0px;
+
+}
+.author {
+	padding-left: 20px;
+}
+
+
+/* END_CONTENIDO */
