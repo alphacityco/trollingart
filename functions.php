@@ -1,5 +1,13 @@
 <?php
 
+    /**
+     * Soporte para Jetpack Infinite Scroll
+     */
+    add_theme_support( 'infinite-scroll', array(
+      'container' => 'articulos'
+    ) );
+
+
     function estilos_temas(){
 
       wp_enqueue_style('bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css');
