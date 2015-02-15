@@ -4,8 +4,7 @@
      * Soporte para Jetpack Infinite Scroll
      */
     add_theme_support( 'infinite-scroll', array(
-      'container' => 'articulos',
-      'wrapper'   => false
+      'container' => 'articulos'
     ) );
 
 
