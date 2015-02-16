@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php wp_title('|',true,'right') ?><?php bloginfo('name'); ?></title>  
+  <title><?php wp_title('|',true,'right') ?><?php bloginfo('name'); ?></title>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
   <header id="sticker" class="menuSocials">
     <div class="container-fluid">
       <div class="row">
-        <div class="logo col-xs-6 col-sm-3 col-md-2 col-lg-2"><h3>TrollingArt</h3></div>
+        <div class="logo col-xs-6 col-sm-3 col-md-2 col-lg-2 text-right"><h3><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h3></div>
         <div class="menuGen col-xs-6 col-sm-9 col-md-10 col-lg-1">
           <div class="btn-group">
             <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
