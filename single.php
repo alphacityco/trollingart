@@ -43,12 +43,21 @@
                   </div>
                   <div class="col-xs-4 author">By: <em><?php the_author_meta('display_name') ?></em></div>
                   <div class="readMore col-xs-7 text-right">
-                    <a href="" class="btn btn-default btn-md">
-                      <span class="glyphicon glyphicon-chevron-left"></span>Previous
-                    </a>
-                    <a href="" class="btn btn-default btn-md">
-                      <span class="glyphicon glyphicon-chevron-right"></span>Next
-                    </a>
+                    <?php
+                      $next = get_permalink(get_adjacent_post(false,'',false));
+                      $prev = get_permalink(get_adjacent_post(false,'',true));
+                      if ($prev != get_permalink()) {
+                    ?>
+                      <a href="<?php echo $prev; ?>" class="btn btn-default btn-md">
+                        <span class="glyphicon glyphicon-chevron-left"></span>Previous
+                      </a>
+                    <?php }
+                      if ($next != get_permalink()) {
+                    ?>
+                      <a href="<?php echo $next; ?>" class="btn btn-default btn-md">
+                        <span class="glyphicon glyphicon-chevron-right"></span>Next
+                      </a>
+                    <?php } ?>
                   </div>
                 </div>
                 <hr>
