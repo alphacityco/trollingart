@@ -1,4 +1,16 @@
 <article <?php post_class(); ?>>
+  <?php
+    $tags = "";
+    $cont = 0;
+    $posttags = sortWpResults( get_the_tags(), 'count', 'asc' );
+    if( $posttags ) {
+      foreach( $posttags as $tag ) {
+        if( $cont == 0 ) { $firstTag =$tag->name; }
+        $tags .= '#'.$tag->name . ' ';
+        $cont++;
+      }
+    }
+  ?>
   <div class="row">
     <div class="titlePost col-md-10"><h2><?php echo "#".$firstTag." | "; the_title(); ?></h2></div>
     <div class="col-md-2"><3 <!--Espacio para votar el post--></div>
