@@ -82,6 +82,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .content .titlePost h2 {
 	margin-top: 10px;
 }
+
+.content .votes {
+	padding: 15px 0 0 10px;
+}
 .content .contentImage {
 	padding: 25px;
 	background-color: #eee;

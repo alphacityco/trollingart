@@ -12,8 +12,8 @@
     }
   ?>
   <div class="row">
-    <div class="titlePost col-md-10"><h2><?php echo "#".$firstTag." | "; the_title(); ?></h2></div>
-    <div class="col-md-2"><3 <!--Espacio para votar el post--></div>
+    <div class="titlePost col-md-9"><h2><?php echo "#".$firstTag." | "; ?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+    <div class="col-md-3 votes text-right"><?php if(function_exists('wp_ulike')) wp_ulike('get'); ?></div>
   </div>
   <div class="row contentImage">
     <img class="imgArticle img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="<?php echo the_title(); ?>">
@@ -36,7 +36,7 @@
       <img class="img-circle" src="<?php echo $url_avatar; ?>">
     </div>
     <div class="col-xs-6 author">By: <em><?php the_author_meta('display_name') ?></em></div>
-    <div class="readMore col-xs-5 text-right"><a href="" class="btn btn-default btn-md"><span class="glyphicon glyphicon-plus"></span>Read more</a></div>
+    <div class="readMore col-xs-5 text-right"><a href="<?php the_permalink(); ?>" class="btn btn-default btn-md"><span class="glyphicon glyphicon-plus"></span>Read more</a></div>
   </div>
   <hr>
 </article>
