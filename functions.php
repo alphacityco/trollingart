@@ -4,9 +4,9 @@
      * Soporte para Jetpack Infinite Scroll
      */
     add_theme_support( 'infinite-scroll', array(
-      'container' => 'articulos'
+      'container' => 'articulos',
+      'type'      => 'click' /* For debuger */
     ) );
-
 
     function estilos_temas(){
 
@@ -86,5 +86,15 @@
       return $contactmethods;
     }
     add_filter( 'user_contactmethods', 'add_to_author_profile', 10, 1);
+    add_filter('widget_text','execute_php',100);
+    function execute_php($html){
+      if(strpos($html,"<"."?php")!==false){
+        ob_start();
+        eval("?".">".$html);
+        $html=ob_get_contents();
+        ob_end_clean();
+      }
+      return $html;
+    }
 
 ?>
