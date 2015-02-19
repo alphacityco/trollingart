@@ -71,7 +71,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Contenido */
 .content {
-	padding-top: 50px;
+	padding-top: 30px;
 }
 .content .container {
 	padding: 0px 85px 0 85px;
@@ -126,5 +126,4 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .sideBarMessage {
 	width: 336px;
-	padding-bottom: 10px;
 }
