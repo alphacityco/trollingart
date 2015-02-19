@@ -20,9 +20,9 @@
               <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Perú</a></li>
+              <!--<li><a href="#">Perú</a></li>
               <li><a href="#">Colombia</a></li>
-              <li><a href="#">Chile</a></li>
+              <li><a href="#">Chile</a></li>-->
               <!--<li class="divider"></li>
               <li><a href="#">Separated link</a></li>-->
             </ul>
@@ -40,7 +40,7 @@
             </span>
             <span class="google">
               <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-              <g:plusone size="medium" href="https://gist.github.com/thebigreason/1296097"></g:plusone>
+              <g:plusone size="medium" href="http://trollingart.com"></g:plusone>
             </span>
             <span class="Facebook">
               <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTrolling-Art%2F906966812686934&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=236972426392468" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width: 150px" allowTransparency="true"></iframe>
