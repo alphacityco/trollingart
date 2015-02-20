@@ -81,6 +81,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .content .titlePost h2 {
 	margin-top: 10px;
+	font-size: 26px;
 }
 
 .content .votes {
@@ -126,4 +127,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .sideBarMessage {
 	width: 336px;
+}
+
+.sidebarBlog .adsense {
+	padding-bottom: 7px;
 }

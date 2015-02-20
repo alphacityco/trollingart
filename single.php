@@ -6,26 +6,23 @@
           <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
               <article <?php post_class(); ?>>
                 <?php
-                  $tags = "";
-                  $cont = 0;
-                  $posttags = sortWpResults( get_the_tags(), 'count', 'asc' );
-                  if( $posttags ) {
-                    foreach( $posttags as $tag ) {
-                      if( $cont == 0 ) { $firstTag =$tag->name; }
-                      $tags .= '#'.$tag->name . ' ';
-                      $cont++;
+                  $cont=0;
+                  foreach((get_the_category()) as $category) {
+                    if ($cont == 0) {
+                      $firstCat = $category->cat_name;
                     }
+                    $cont++;
                   }
                 ?>
                 <div class="row">
-                  <div class="titlePost col-md-9"><h2><?php echo "#".$firstTag." | "; the_title(); ?></h2></div>
+                  <div class="titlePost col-md-9"><h2><?php echo "#".$firstCat." | "; the_title(); ?></h2></div>
                   <div class="col-md-3 votes text-right"><?php if(function_exists('wp_ulike')) wp_ulike('get'); ?></div>
                 </div>
                 <div class="row contentImage">
                   <img class="imgArticle img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="<?php echo the_title(); ?>">
                 </div>
                 <div class="row tags">
-                  <h4><?php echo $tags; ?></h4>
+                  <h4><?php $posttags = get_the_tags(); if ($posttags) { foreach($posttags as $tag) { echo '<span class="label label-info">#'.$tag->name . '</Span> '; } } ?></h4>
                 </div>
                 <div class="row textArticle">
                   <?php the_content(); ?>
