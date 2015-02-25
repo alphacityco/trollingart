@@ -18,8 +18,17 @@
   <div class="row tags">
     <h4><?php $posttags = get_the_tags(); if ($posttags) { foreach($posttags as $tag) { echo '<span class="label label-info">#'.$tag->name . '</Span> '; } } ?></h4>
   </div>
-  <div class="row textArticle">
-    <?php //the_excerpt(); ?>
+  <div class="row">
+    <?php
+      if ( function_exists( 'sharing_display' ) ) {
+        sharing_display( '', true );
+      }
+
+      if ( class_exists( 'Jetpack_Likes' ) ) {
+        $custom_likes = new Jetpack_Likes;
+        echo $custom_likes->post_likes( '' );
+      }
+    ?>
   </div>
   <div class="row infoAuthor">
     <div class="col-xs-1 avatar">
