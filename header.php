@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="p:domain_verify" content="50d49119d52a9dd6ba8adc5ab9833adc"/>
   <title><?php wp_title('|',true,'right') ?><?php bloginfo('name'); ?></title>
   <?php wp_head(); ?>
 </head>
@@ -11,11 +12,11 @@
   <header id="sticker" class="menuSocials">
     <div class="container-fluid">
       <div class="row">
-        <div class="logo col-xs-6 col-sm-3 col-md-2 col-lg-2 text-right"><h3><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h3></div>
-        <div class="menuGen col-xs-6 col-sm-9 col-md-10 col-lg-1">
+        <div class="logo col-xs-6 col-sm-5 col-md-7 col-lg-3 text-right"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/logo.jpg">TROLLING <span class="black">ART</a></a></div>
+        <div class="menuGen col-xs-6 col-sm-7 col-md-5 col-lg-1">
           <div class="btn-group">
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
@@ -31,7 +32,7 @@
         <div class="tagsMenu col-md-3 col-lg-3 visible-lg">
           <h4>#HashTags · Articles · ArtLife</h4>
         </div>
-        <div class="socialLink col-md-6 col-lg-6 containerSocial visible-lg">
+        <div class="socialLink col-md-6 col-lg-5 containerSocial visible-lg">
           <div class="social">
             <span class="twitter">
               <a class="twitter-follow-button" href="https://twitter.com/trolling_art" data-show-count="true" data-lang="en">Follow @trolling_art</a>

@@ -14,24 +14,48 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+body {
+
+}
+
+a {
+	color: #737DAE;
+}
+
 /*  HEADER */
 .menuSocials {
 	border-bottom: 1px solid rgba(0,0,0,0.05);
-	height: 70px;
+	height: 90px;
 	z-index: 9999;
 	background-color: #fff;
 }
 .logo h3, .menuGen, .tagsMenu h4, .socialLink {
-	line-height: 70px;
+	line-height: 90px;
 }
-
+/*
 .logo h3 {
 	font-weight: 900;
 }
+*/
 
-.logo h3, .tagsMenu h4 {
+.tagsMenu h4 {
 	margin-top: 0px;
 
+}
+.logo {
+	padding: 5px 0;
+}
+.logo a {
+	color: #7D7D7D;
+	font-size: 2em;
+}
+.black {
+	color: #000;
+}
+
+.menuGen {
+		padding-left: 30px;
+		padding-right: 0px;
 }
 
 .containerSocial {
@@ -43,8 +67,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .social {
 	/* border: 1px solid red; */
 	font-size: 1px;
-	width: 80%;
-	float: right;
+	float: left;
 }
 
 /* This gets Facebook to fall into place */
