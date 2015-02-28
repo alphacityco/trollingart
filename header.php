@@ -5,14 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="p:domain_verify" content="50d49119d52a9dd6ba8adc5ab9833adc"/>
-  <title><?php wp_title('|',true,'right') ?><?php bloginfo('name'); ?></title>
+  <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
   <header id="sticker" class="menuSocials">
     <div class="container-fluid">
       <div class="row">
-        <div class="logo col-xs-6 col-sm-5 col-md-7 col-lg-3 text-right"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/logo.jpg">TROLLING <span class="black">ART</a></a></div>
+        <div class="logo col-xs-6 col-sm-5 col-md-7 col-lg-3 text-right"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/logo.jpg">TROLLING <span class="black">ART</span></a></div>
         <div class="menuGen col-xs-6 col-sm-7 col-md-5 col-lg-1">
           <div class="btn-group">
             <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
